@@ -1,4 +1,8 @@
-// Wait a second. I dont know which files I require
+import React, { useState } from "react";
+import SideBar from "../components/SideBar";
+import Home from "../components/Home";
+import Transaction from "../components/Transactions";
+import "../styles/dashboard.css";
 
 export default function Dashboard() {
   const [current, setCurrent] = useState({ page: <Home />, id: 0 });

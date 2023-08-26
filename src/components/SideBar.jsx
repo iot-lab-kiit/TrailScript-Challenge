@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import "../styles/sidebar.css";
 
 export default function SideBar(props) {
-  // I cant display anything
   <div className="sidebar-container">
     <Link to="/">
       <img src={dashicon} alt="" />

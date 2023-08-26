@@ -47,8 +47,8 @@ export default function Transaction() {
 }
 
 function TransMain() {
-  const itemsT = items.map((i) => (
-    <div className="transaction-grid" key="1">
+  const itemsT = items.map((i, index) => (
+    <div className="transaction-grid" key="true">
       <div className="transaction-items-container">
         <div className="transaction-items">
           <img src={Avatar} alt="" className="image" />
@@ -78,6 +78,7 @@ function TransMain() {
           </span>
         </div>
       </div>
+      <hr />
     </div>
   ));
 

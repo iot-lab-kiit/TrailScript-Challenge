@@ -1,12 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../images/vep-logo.svg";
 import credential from "../images/signup-cred.svg";
 import { Link } from "react-router-dom";
 import "../styles/signup.css";
 
-  // Whoopsy an error here. Help me figure it out :)
-export const  Signup() => {
-  // Lemme help you, do the same you did in Login.jsx
+const SignUp = () => {
+  const [hidepass, setHidePass] = useState(true);
+  const [hideconf, setHideConf] = useState(true);
   return (
     <div>
       <div className="app-container-signup">
@@ -83,7 +83,7 @@ export const  Signup() => {
                       viewBox="0 0 24 24"
                       strokeWidth={1.5}
                       stroke="#787878"
-                      className="icon icon-size"
+                      className="icon"
                     >
                       <path
                         strokeLinecap="round"
@@ -98,7 +98,7 @@ export const  Signup() => {
                       viewBox="0 0 24 24"
                       strokeWidth={1.5}
                       stroke="#787878"
-                      className="icon icon-size"
+                      className="icon"
                     >
                       <path
                         strokeLinecap="round"
@@ -134,15 +134,15 @@ export const  Signup() => {
                   placeholder="Confirm Password"
                   className="confirm-password-input"
                 />
-                <div onClick={() => setHidePass(!hideconf)}>
-                  {hidepass ? (
+                <div onClick={() => setHideConf(!hideconf)}>
+                  {hideconf ? (
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
                       strokeWidth={1.5}
                       stroke="#787878"
-                      className="icon icon-size"
+                      className="icon h-4 w-4"
                     >
                       <path
                         strokeLinecap="round"
@@ -157,7 +157,7 @@ export const  Signup() => {
                       viewBox="0 0 24 24"
                       strokeWidth={1.5}
                       stroke="#787878"
-                      className="icon icon-size"
+                      className="w-4 h-4 icon"
                     >
                       <path
                         strokeLinecap="round"
@@ -195,6 +195,6 @@ export const  Signup() => {
       </div>
     </div>
   );
-}
+};
 
-// How will react know if something is here or not?
+export default SignUp;
